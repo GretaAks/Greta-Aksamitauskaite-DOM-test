@@ -1,0 +1,114 @@
+{
+    "apartments": [
+      {
+        "id": "1",
+        "type": "flat",
+        "owner": {
+            "fullname": "Dalia Grybauskaitė",
+            "email": "dalia@patisaufaina.lt",
+            "phone": "+370 655 22331"
+          },
+        "roomCount": 3,
+        "squares": 72,
+        "address": {
+            "city": "Vilnius",
+            "country": "Lietuva",
+            "street": "Vilniaus g.",
+            "number": "20-5"
+          },
+        "price": {
+          "amount": 350000,
+          "currency": "€"
+        },
+        "imgSrc": "https://www.newhouse.lt/wp-content/uploads/2017/10/Tower-web6.jpg"
+      },
+      {
+        "id": "2",
+        "type": "house",
+        "owner": {
+            "fullname": "Pavelas Trintukas",
+            "email": "pavelas@kebabas.lt",
+            "phone": "+370 655 66666"
+          },
+        "roomCount": 6,
+        "squares": 250,
+        "address": {
+            "city": "Vilnius",
+            "country": "Lietuva",
+            "street": "Pašilio g.",
+            "number": "14"
+          },
+        "price": {
+          "amount": 460000,
+          "currency": "$"
+        },
+        "imgSrc": "https://www.openhousevilnius.lt/2019/wp-content/uploads/sites/11/2018/04/DO-ARCHITECTS_Zemoji-g_Norbert-Tukaj-2-1-1020x500.jpg"
+      },
+      {
+        "id": "3",
+        "type": "cottage",
+        "owner": {
+            "fullname": "Marija Ros",
+            "email": "maria@kabloom.eu",
+            "phone": "+370 655 22448"
+          },
+        "roomCount": 4,
+        "squares": 120,
+        "address": {
+            "city": "Kaunas",
+            "country": "Lietuva",
+            "street": "Lygioji g.",
+            "number": "5A"
+          },
+        "price": {
+          "amount": 90000,
+          "currency": "€"
+        },
+        "imgSrc": "https://s1.15min.lt/images/photos/2020/05/15/original/nauji-kotedzai-kaune-5ebe9b5f517bc.jpg"
+      },
+      {
+        "id": "4",
+        "type": "flat",
+        "owner": {
+            "fullname": "Tom John",
+            "email": "tom@john.co.uk",
+            "phone": "+44 0655 22331"
+          },
+        "roomCount": 2,
+        "squares": 45,
+        "address": {
+            "city": "Londonas",
+            "country": "Didžioji Britanija",
+            "street": "London str.",
+            "number": "654-56"
+          },
+        "price": {
+          "amount": 100000,
+          "currency": "€"
+        },
+        "imgSrc": "https://s1.15min.lt/images/photos/2017/05/11/big/butas-londone-is-kurio-atsiveria-geriausias-miesto-vaizdas-591424a1e6e44.jpg"
+      },
+      {
+        "id": "5",
+        "type": "flat",
+        "owner": {
+            "fullname": "Vika Thomson",
+            "email": "vika@jazz.eu",
+            "phone": "+45 0225 777854"
+          },
+        "roomCount": 4,
+        "squares": 60,
+        "address": {
+            "city": "Paryžius",
+            "country": "Prancūzija",
+            "street": "Love str.",
+            "number": "45-7"
+          },
+        "price": {
+          "amount": 185000,
+          "currency": "$"
+        },
+        "imgSrc": "https://pix10.agoda.net/hotelImages/77780/-1/8c27ab90b3aa71b0462d47dc3dcad1b9.jpg?ca=20&ce=0&s=1024x768"
+      }
+    ]
+}
