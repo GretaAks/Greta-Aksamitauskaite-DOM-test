@@ -7,7 +7,19 @@ class ApartmentGridComponent{
         this.init();
     }
 
-    fetchApartments = () => API.fetchApartments(this.saveApartments,alert);
+    fetchApartments = () => {
+        API.fetchApartments(
+          (apartments) => {
+            this.state.loading = false;
+            this.saveApartments(apartments);
+          },
+          (err) => {
+            alert(err);
+            this.state.loading = false;
+            this.render();
+          }
+        );
+      };
 
     saveApartments = (apartments) => {
         this.state.apartments = apartments;
@@ -25,6 +37,12 @@ class ApartmentGridComponent{
         return column;
     }
 
+    deleteApartments = (id) => {
+        id,
+        () => API.fetchApartments(this.saveApartments,alert),
+        alert
+    };
+
     init = () => {
         this.state.loading = true;
         this.fetchApartments();
@@ -35,18 +53,21 @@ class ApartmentGridComponent{
     }
 
     render = () => {
-        const {loading,apartments} = this.state;
+        const { loading, apartments } = this.state;
         if (loading) {
-            this.htmlElement.innerHTML= '<div class=" text-center"><img src="assets/loading.gif"/</div>';
-        } else if (apartments.length>0){
-            this.htmlElement.innerHTML= '';
-            const apartmentElement= apartments
-            .map(x => new ApartmentCardComponent(x))
-            .map (x => x.htmlElement)
-            .map (this.wrapColumn);
-            this.htmlElement.append(...apartmentElement)
+          this.htmlElement.innerHTML = `<div class="text-center"><img src="assets/loading.gif"/></div>`;
+        } else if (apartments.length > 0) {
+          this.htmlElement.innerHTML = '';
+          const apartmentElements = apartments
+            .map(({ id, ...props }) => new ApartmentCardComponent({
+              ...props,
+              onDelete: () => this.deleteApartments(id)
+            }))
+            .map(x => x.htmlElement)
+            .map(this.wrapColumn);
+          this.htmlElement.append(...apartmentElements)
         } else {
-            this.htmlElement.innerHTML= 'Atsiprašome, bet šiuo metu neturime NT pasiūlymų.';
+          this.htmlElement.innerHTML = `<h2>Atsiprašome, šiuo metu neturime NT pasiūlymų</h2>`;
         }
-        }
+      }
     }

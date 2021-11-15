@@ -7,15 +7,13 @@ class ApartmentCardComponent {
     }
 
     init = () =>{
-        const {type, owner, roomCount,squares,address,price,imgSrc} = this.props;
+        const {type, owner, roomCount,squares,address,price,imgSrc,onDelete} = this.props;
         const {fullname,email,phone} = owner;
         const {city,country,street,number} = address;
         const {amount, currency} = price;
 
         const finalPrice = currency === '$'? amount / ApartmentCardComponent.USD_EUR:amount;
         const formatePrice = Math.round (100*finalPrice)/ 100 + ' €';
-
-
 
         this.htmlElement= document.createElement('article');
         this.htmlElement.className= 'card p-2 shadow';
@@ -42,6 +40,9 @@ class ApartmentCardComponent {
         <li>${phone}</li>
         </ul>
         </div>
-        `
+        <button class="btn btn-success">Ištrinti</button>
+        `;
+        const btn = this.htmlElement.querySelector('.btn');
+        btn.addEventListener('click',onDelete);
     }
 }
