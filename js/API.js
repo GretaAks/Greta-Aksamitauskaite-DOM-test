@@ -8,7 +8,7 @@ class API {
         .catch(failure)
     }
     static deleteApartments = (id,success,failure) => {
-        fetch(`${baseURL}/apartments/${id}`),{method:'DELETE'}
+        fetch(`${baseURL}/apartments/${id}`,{method:'DELETE'})
         .then(res=>res.ok? success(): failure(res.statusText))
         .catch(failure)
     }
@@ -16,11 +16,11 @@ class API {
 
 //API.fetchApartments(
 //    console.log,
-//    console.error
+ //   console.error
 //)
 
 //API.deleteApartments(
 //    "3",
 //    () => console.log('Ištrinta sėkmingai'),
 //    console.error
-//)//
+//)

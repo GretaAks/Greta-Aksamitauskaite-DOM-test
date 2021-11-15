@@ -4,8 +4,8 @@
   "description": "CA DOM atsiskaitymas",
   "main": "index.js",
   "scripts": {
-    "start-unix": "node_modules/.bin/json-sever --watch database.json",
-    "start-win": "node_modules\\.bin\\json-sever --watch database.json"
+    "start-unix": "json-server --watch database.json",
+    "start-win": "json-server --watch database.json"
   },
   "repository": {
     "type": "git",
